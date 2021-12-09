@@ -85,7 +85,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home handleChange={handleChange} />}  />
+          <Route path='/' element={<Home handleChange={handleChange} />} exact />
           <Route path='/compA' element={<ComponentA userName={formField.userName}/>} />
           <Route path='/compB' element={<ComponentB />} />
         </Routes>
