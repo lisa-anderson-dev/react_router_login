@@ -85,12 +85,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home handleChange={handleChange} />} exact />
-          <Route path='/compA' element={<ComponentA userName={formField.userName}/>} />
-          <Route path='/compB' element={<ComponentB />} />
+          <Route path={process.env.PUBLIC_URL + '/'} element={<Home handleChange={handleChange} />} />
+          <Route path={process.env.PUBLIC_URL + '/compA'} element={<ComponentA userName={formField.userName}/>} />
+          <Route path={process.env.PUBLIC_URL + '/compB'} element={<ComponentB />} />
         </Routes>
         <div className="linkDiv" style={{textAlign: "center"}}>
-          <Link style={linkStyle} onClick={resetFields} to={path}>{btnLabel}</Link>
+          <Link style={linkStyle} onClick={resetFields} to={process.env.PUBLIC_URL + path}>{btnLabel}</Link>
         </div>
       </BrowserRouter>
     </div>
